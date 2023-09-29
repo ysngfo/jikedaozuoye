@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>环绕音频和可视化体验</title>
+  <link href="style.css" rel="stylesheet"/>
+  <!--
+    创新点：
+    1、学习并运用了音频节点的相关知识
+    2、将普通的声音转化为立体的，环绕的（虽然由于个人技术原因还是无法做到三维）
+    3、将音频的声音大小（离中心的远近）和频率结合，做出可视化图像
+    4、对于上传音频需求的实现
+    5、使用github pages进行存储音频文件
+-->
+</head>
+<body>
+    <div id="biaoti"><h1 id="shang">环绕音频和可视化体验</h1>
+    <h4 id="shang2">——计算机科学导论个人作业</h4></div>
+  <div id="container">
+      <img class="rotate-image" src="./黑胶.jpeg" alt="旋转的图片">
+    
+    <canvas id="ccolar"></canvas>
+    <canvas id="visualizer"></canvas>    
+    <div id="redDot"></div>
+  </div>
+  <select id="audioSelect" onchange="changeImage()">
+    <option value= null>请选择音频</option>
+    <option value="https://ysngfo.github.io/jkdzuoyeyinpin/%E5%8D%95%E8%BD%A6.mp3">单车</option>
+    <option value="https://ysngfo.github.io/jkdzuoyeyinpin/%E4%B8%83%E9%87%8C%E9%A6%99.mp3">七里香</option>
+    <option value="https://ysngfo.github.io/jkdzuoyeyinpin/入海.mp3">入海</option>
+    <option value="https://ysngfo.github.io/jkdzuoyeyinpin/铃芽户缔.mp3">すずめ（铃芽户缔主题曲）</option>
+    <option value="https://ysngfo.github.io/jkdzuoyeyinpin/只因你太美.mp3">只因你太美</option>
+    <option value="https://ysngfo.github.io/jkdzuoyeyinpin/我不曾忘记.mp3">我不曾忘记</option>
+    <option value="https://ysngfo.github.io/jkdzuoyeyinpin/绅士.mp3">绅士</option>
+  </select>
+  <button id="playButton">播放音频</button>
+  <button id="stopplay">暂停播放</button>
+  <button id="helpB">帮助</button>
+  <button id="thanksB">致谢</button>
+  <input type="file" id="fileInput" style="display: none;">
+  <button id="uploadButton">上传音频</button>
+  <div id="help"><h3 style="text-align:center">帮助</h3>
+    <p>1、上传或选择音频之后，点击播放音频即可播放，随着鼠标操控图标在屏幕中心的圆内移动，声音的方向会随着图标与中心的相对位置而变化</p>
+    <p>2、将网页调到最大并佩戴耳机以获取更佳体验</p>
+    <p>3、请注意调整声音大小</p>
+    <p>4、用下拉栏选择音乐后请稍微等待（几秒即可）<p id="zhushi"><s>绝对不是因为有个地方修不好改成了使用网络上音频资源</s></p>
+    <p style=" text-align: center;font-size: 6px;bottom: 0%;">(再次点击帮助关闭)</p> 
+  </div>
+  <div id="thanks"><h3 style="text-align:center">致谢</h3>
+    <p>特别感谢<a target="_blank" href="https://www.runoob.com/">菜鸟教程</a>，<a target="_blank" href="https://www.freecodecamp.org/">freecodecamp</a>和<a target="_blank" href="https://www.csdn.net/">csdn</a>上相关教程，尤其是关于<a target="_blank" href="https://www.w3schools.com/xml/xml_http.asp">XMLHttpRequest</a>相关的使用和<a target="_blank" href="https://blog.csdn.net/zego_0616/article/details/120782886">web audio api</a>的使用，同时，也很感谢徐老师和各位助教老师长时间的付出和陪伴</p>
+  </br>
+  </br>
+    <p style=" text-align: center;font-size: 6px;bottom:0;">(再次点击致谢关闭)</p>
+  </div>
+
+  <script src="变量.js" defer></script> 
+  <script src="更新鼠标.js" defer></script>
+   <script src="粒子效果.js" defer></script>
+  <script src="调整音频.js" defer></script>
+  <script src="致谢.js" defer></script>
+  <script src="暂停和播放.js" defer></script>
+  <script src="容器计算.js" defer></script>
+<footer style="color:aliceblue; position: absolute; bottom: 0%;text-align: center; z-index: 5;font-size: 15px;">图片和音频素材来自网络（百度等直接搜索）</footer>
+</body>
+
+</html>

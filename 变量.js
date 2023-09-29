@@ -1,0 +1,15 @@
+var audioContext = new (window.AudioContext || window.webkitAudioContext)();
+var container = document.getElementById('container');
+var redDot = document.getElementById('redDot');
+var redDotdistance;
+var triangle = document.getElementById('triangle');
+var circle = document.getElementById('circle');
+var audioSelect = document.getElementById('audioSelect');
+var playButton = document.getElementById('playButton');
+var uploadButton = document.getElementById('uploadButton');
+var fileInput = document.getElementById('fileInput');
+var isplaying=false;
+var containerWidth, containerHeight;
+var selectedAudio = '';
+var audioData= null;
+var source = audioContext.createBufferSource();
