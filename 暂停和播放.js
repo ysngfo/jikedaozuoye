@@ -91,8 +91,8 @@ function changeImage() {
   var dropdown = document.getElementById("audioSelect");
   var dot = document.getElementById("redDot");
   var selectedValue = dropdown.value;
-  if (selectedValue=="https://ysngfo.github.io/jkdzuoyeyinpin/只因你太美.mp3"){  dot.style.backgroundImage = "url(./篮球.jpeg)";}
-else if (selectedValue=="https://ysngfo.github.io/jkdzuoyeyinpin/我不曾忘记.mp3"){  dot.style.backgroundImage = "url(./派蒙.jpeg)";}
+  if (selectedValue=="https://github.com/ysngfo/jikedaozuoye/blob/main/%E5%8F%AA%E5%9B%A0%E4%BD%A0%E5%A4%AA%E7%BE%8E.mp3"){  dot.style.backgroundImage = "url(./篮球.jpeg)";}
+else if (selectedValue=="https://github.com/ysngfo/jikedaozuoye/blob/main/%E6%88%91%E4%B8%8D%E6%9B%BE%E5%BF%98%E8%AE%B0.mp3"){  dot.style.backgroundImage = "url(./派蒙.jpeg)";}
 else {
   dot.style.backgroundImage = "url(./鼠标.jpeg)";
 }
